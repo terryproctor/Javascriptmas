@@ -12,8 +12,7 @@ function altCaps(str){
  
     for (let i = 0; i < str_array.length; i++){
         if (i%2 == 0) {
-            new_str_array.push(str_array[i].toUpperCase());
-           
+            new_str_array.push(str_array[i].toUpperCase());     
         }
         else {
             new_str_array.push(str_array[i]);   
