@@ -20,24 +20,34 @@ Expected output:
 ]
 */
 
+
 function getFreePodcasts(data){
-   let freePods = data.filter(x => x['paid'] === false);
+   let freePods = data.filter(x => x['paid'] === false)
    
-   let sel = ['title', 'rating', 'paid'];
+   freePods.map((pod) => {
+        return { 
+                    title : pod.title, 
+                    rating : pod.rating, 
+                    paid : pod.paid
+                }
+     }
+    );
    
- let filteredPods = [];
+   return freePods;
+   
+//  let filteredPods = [];
  
- freePods.forEach(obj => {
-     let newObj = {};
+//  freePods.forEach(obj => {
+//      let newObj = {};
      
-     newObj['title'] = obj.title;
-     newObj['rating'] = obj.rating;
-     newObj['paid'] = obj.paid;
+//      newObj['title'] = obj.title;
+//      newObj['rating'] = obj.rating;
+//      newObj['paid'] = obj.paid;
      
-     filteredPods.push(newObj);
- })  
+//      filteredPods.push(newObj);
+//  })  
    
-   return filteredPods;
+   
 };
 
 console.log(getFreePodcasts(podcasts))
