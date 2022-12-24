@@ -21,6 +21,8 @@ h1 {
 
 #player {
   background-color: #DEEAEE;
+  visibility: hidden;
+  display: none;
 }
 
 button {

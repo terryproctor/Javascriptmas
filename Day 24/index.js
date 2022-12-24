@@ -7,12 +7,9 @@ function playSong(id) {
   player.src = player_src;
   let playing = document.querySelector(`[onclick="playSong('${id}')"]`);
   let buttons = document.getElementsByTagName("button");
-  console.log(buttons[2]);
   for (let i = 0; i < buttons.length; i++){
     buttons[i].style.backgroundColor = "#BDD59B";
   }
-  // buttons.forEach(element => {
-  //   element.style.backgroundColor = "red";    
-  // });
-  playing.style.backgroundColor = "blue";
+ 
+  playing.style.backgroundColor = "rgb(250,80,80)";
 }
